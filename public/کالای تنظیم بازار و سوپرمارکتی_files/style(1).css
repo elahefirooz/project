@@ -1,0 +1,326 @@
+body, html{
+  direction: rtl;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.modal-container {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-bg {
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .5;
+}
+
+.modal {
+  z-index: 100;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  height: 700px;
+  max-width: 100%;
+  max-height: 100%;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 2px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal-title {
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: gainsboro;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  border-bottom: 2px solid lightgray;
+}
+
+.modal-close-button{
+  padding: 3px;
+  margin-right: 5px;
+  color: gray;
+}
+.modal-close-button:hover{
+  cursor: pointer;
+}
+.modal-map-container {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-selected-region {
+  font-size: 18px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  box-sizing: border-box;
+  background-color: gainsboro;
+  border-top: 2px solid lightgray
+}
+
+.modals-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 800;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-confirm-button {
+  background-color: #209d43;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+.modal-confirm-button:disabled {
+  background-color: gray;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: not-allowed;
+}
+
+.modal-reject-button {
+  background-color: #c61018;
+  color: white;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  position: relative;
+}
+
+.modal-button-loading {
+  transform: scale(.4);
+  position: absolute;
+}
+.tooltip {
+  text-align:center;
+}
+#tehranmap {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.leaflet-tooltip-pane {
+  direction: ltr !important;
+}
+/* Here is the Map CSS */
+.tehran-map {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 5px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wrong-region-selected{
+  color: #c61018;
+}
+/* Here is the loading CSS */
+
+.lds-dual-ring {
+  width: 0px;
+  height: 0px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.user-preference-modal {
+  margin: auto;
+  position: inherit;
+  z-index: 100;
+  width: 1000px;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preference-selection {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  gap: 10px;
+}
+.preference-item{
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 20px;
+  width: 50%;
+  cursor: pointer;
+  font-size: 50px;
+  box-shadow: 1px 2px 25px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 560px) {
+  .custom-map-search{
+    min-width: 150px;
+    width: calc(100% - 60px) !important;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .modal-title {
+    display: none;
+  }
+  .modal-confirm-button{
+    border-radius: 0;
+  }
+  .modal-reject-button{
+    border-radius: 0;
+  }
+  .preference-item{
+    font-size: 30px;
+  }
+  .preference-selection{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .preference-item{
+    width: 90vw
+  }
+}
+
+.fade-in-modal { animation: fadeIn .7s; }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.custom-map{
+	height: 100%;
+	width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+.custom-map-search{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 350px;
+  height: 30px;
+  background-color: white;
+}
+
+
+.custom-map-container{
+	height: 500px;
+	width: 100vw;
+}
+
+.custom-map-search-input{
+  width: 100%;
+  height: 100%;
+  border: unset;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  box-shadow: -2px 1px 10px 0px rgba(0,0,0,0.1);
+
+}
+.custom-map-search-result-container{
+  background-color: white;
+  width: 100%;
+  box-shadow: -2px 1px 10px 0px rgba(0,0,0,0.1);
+  max-height: 400px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.custom-map-search-result-item{
+  background-color: white;
+  width: 100%;
+  padding: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-size: 13px;
+  
+}
+.custom-map-search-result-item:hover{
+  background-color: lightgray;
+  cursor: pointer;
+
+}
+.custom-map-search-result-item-selected{
+  background-color: lightgray;
+  cursor: pointer;
+}

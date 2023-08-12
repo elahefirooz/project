@@ -1,0 +1,35 @@
+﻿@import url('print.css');
+@font-face{font-family:iranyekan;font-style:normal;font-weight:400;src:url(../fonts/eot/IRANSansWeb.eot);src:url('../fonts/eot/IRANSansWeb(FaNum).eot'),url(../fonts/woff/IRANSans.woff) format('woff'),url('../fonts/IRANSans(FaNum).ttf') format('truetype')}.fa-twitter::before{content:"\f2c6"!important}.slideshow-container{border:1px solid #e7e7e7;border-radius:5px;overflow:hidden}.artlist-no-separators .artlist-grid:not(.artlist-boxed) .art{border-bottom-width:0!important;background-image:linear-gradient(to bottom,#fefefe,#f8f8f8);border:1px solid #e7e7e7;border-bottom-width:1px;border-bottom-width:1px;border-radius:5px;margin:10px 21px;-webkit-box-shadow:0 4px 4px 0 rgba(0,0,0,.11);box-shadow:0 4px 4px 0 rgba(0,0,0,.11)}.art-drop{position:relative!important;margin-top:10px!important;opacity:1!important;border-top-color:rgba(0,0,0,.2)!important;visibility:visible!important}.fa-pinterest::before{content:"\f16d"!important}.footer-bottom{padding:.5rem 0!important}.btn-icon,.btn-circle{width:calc(1.75rem + 2px)!important;height:calc(1.75rem + 2px)!important}.textFooter{padding-top:5px}.btnC{height:96%!important;border-top-left-radius:0.125rem!important;border-bottom-left-radius:0.125rem!important;border-bottom-right-radius:0!important;border-top-right-radius:0!important}@media (max-width:450px){.justify-content-between{display:block!important}.form-check-label{margin-bottom:10px}}.aparat:hover{color:#fff;background-color:#c5184e;border-color:#c5184e}.aparat{line-height:1.75rem!important}@media (max-width:300px){.artlist-grid.artlist-6-cols .art{max-width:100%!important;flex:0 0 100%;margin:0 auto}}
+.friendTb, .secondTbInvite {
+	border-collapse: unset;
+	width: 100%
+}
+@media (max-width:700px) {
+	.friendTb, .secondTbInvite {
+		width: 100%
+	}
+}
+
+@media (min-width:600px) {
+	.fixheader {
+		height: 280px;
+	}
+}
+
+@media (min-width:321px) and (max-width:600px) {
+	.fixheader {
+		height: 100px;
+	}
+}
+
+
+
+@media (max-width:320px) {
+	.fixheader {
+		height: 100px;
+	}
+}
+
+#main-update-container {
+	min-height: 500px
+}
