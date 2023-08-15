@@ -12,6 +12,7 @@
   </div>
   </div>
 
+  
   <div class="back">
     <div  v-for="product in ProductsStore.products" :key="product.id">
     <div class= "product" v-if="product.row === 'll'">

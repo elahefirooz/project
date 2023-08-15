@@ -115,13 +115,11 @@
   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
   <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
 </svg> -->
-    </div>
-
-    
+</div>
     </div>
     
 
-
+    
     <div class="search">
       <img style="width: 256px;" src="../../public/bazargam.png" alt="">
       <input style="height: 32px; width: 400px; border-radius: 10px; border: 2px solid #000;" type="search" name="" id="" placeholder="    جست وجو" v-model="textSearch" @keyup="search(textSearch)"  >
@@ -131,9 +129,7 @@
 </svg>
   
     </div>
-    
-
-    
+  
     <div class="all-product">
       
       <div style="margin: 0px 10px;" ><router-link to="/news" class="a">کل محصولات</router-link></div>
@@ -142,7 +138,7 @@
         <button class="dropbtn">کالای دیجیتال</button>
         <div class="dropdown-content">
           <router-link to="/new">تلفن</router-link>
-          <router-link to="/new">lموبایل</router-link>
+          <router-link to="/new"> موبایل</router-link>
           <router-link to="/new">هدفون</router-link>
           <router-link to="/new">ساعت هوشمند</router-link>
         </div>
@@ -190,13 +186,10 @@
 
 
     </div>
-    
-    
-    
   </div>
 
 
-  <div class="flex" v-for="x in searchProduct" :key="x.id">
+  <div class="storesearch" v-for="x in searchProduct" :key="x.id">
     <img style="width: 70px; height: 70px;" :src="x.src" alt="" >
   <h3 style="margin: 30px;"  v-if="textSearch">{{ x.title }}</h3>
   <h3 style="margin: 30px;"  v-if="textSearch">{{ x.weight }}</h3>
@@ -206,7 +199,6 @@
 </template>
 
 <script setup lang="ts">
-// import type { log } from "console";
 import { type Ref, ref } from "vue";
 import { productsStore } from "../../stores/product";
 const ProductsStore = productsStore();
@@ -223,14 +215,12 @@ let searchProduct: Ref<{
 }[]>
 
 
-// export default {}
-function search(text : string)  {
-  // console.log(ProductsStore.products.filter( (p:any) => p.title.includes(textSearch)));
-    searchProduct =  ProductsStore.products.filter( (p:any) => p.title.includes(text) );
-  
-  
 
+function search(text : string)  {
+  
+    searchProduct =  ProductsStore.products.filter( (p:any) => p.title.includes(text) );
 }
+
 </script>
 
 <style>
@@ -240,17 +230,14 @@ function search(text : string)  {
   font-size: large;
   height: fit-content;
 }
+ .s:hover{
+  color: red;
+  transition: 0.16s;
+}
 .a {
-  /* background-color: rgb(215, 189, 239); */
-  /* padding: 50px; */
-  /* text-decoration: none; */
-  /* border-radius:20px ; */
-  
-  /* align-items: center;
-  align-content: center; */
+
   color: black;
   text-decoration: none;
-  /* margin: 10px 20px 10px 20px; */
   height: fit-content;
 }
 
@@ -258,7 +245,7 @@ function search(text : string)  {
   color: red;
   transition: 0.16s;
 }
-/* Dropdown Button */
+
 .dropbtn {
   background-color: #f6f0f7;
   color: rgb(10, 2, 2);
@@ -268,7 +255,7 @@ function search(text : string)  {
   border-radius: 10px;
 }
 
-/* The container <div> - needed to position the dropdown content */
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -277,7 +264,7 @@ function search(text : string)  {
   width: fit-content;
 }
 
-/* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -287,7 +274,7 @@ function search(text : string)  {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -298,7 +285,6 @@ function search(text : string)  {
 .background {
   direction: rtl;
   background-image: url('../../public/backg.jpg');
-  
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 30px;
@@ -318,17 +304,16 @@ function search(text : string)  {
 }
 
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+
 .dropdown:hover .dropbtn {
   background-color: #efe6ec;
 }
@@ -346,7 +331,7 @@ function search(text : string)  {
 .bi{
   margin:50px ;
 }
-.flex{
+.storesearch{
   display: flex;
  justify-content: right;
  direction: rtl;
