@@ -7,83 +7,83 @@
       <button class="dropbtn" style="margin: 0px 5px">انتخاب شهر</button>
 
       <div class="dropdown-content">
-        <router-link to="/new">تهران</router-link>
+        <router-link to="/tehran">تهران</router-link>
 
-        <router-link to="/new">کرمان</router-link>
+        <router-link to="/kerman">کرمان</router-link>
 
-        <router-link to="/new">شیراز</router-link>
+        <router-link to="/shiraz">شیراز</router-link>
 
-        <router-link to="/new">کرمانشاه</router-link>
+        <router-link to="/kermanshah">کرمانشاه</router-link>
 
-        <router-link to="/new">گرگان</router-link>
+        <router-link to="/gorgan">گرگان</router-link>
 
-        <router-link to="/new">رشت</router-link>
+        <router-link to="/rasht">رشت</router-link>
 
-        <router-link to="/new">بجنورد</router-link>
+        <router-link to="/bojnoord">بجنورد</router-link>
 
-        <router-link to="/new">کاشان</router-link>
+        <router-link to="/kashan">کاشان</router-link>
 
-        <router-link to="/new">قزوین</router-link>
+        <router-link to="/ghazvin">قزوین</router-link>
 
-        <router-link to="/new">همدان</router-link>
+        <router-link to="/hamedan">همدان</router-link>
 
-        <router-link to="/new">بوشهر</router-link>
+        <router-link to="/booshehr">بوشهر</router-link>
 
-        <router-link to="/new">گلبهار-چناران</router-link>
+        <router-link to="/gholbahar">گلبهار-چناران</router-link>
 
-        <router-link to="/new">ملک آباد-بینالود</router-link>
+        <router-link to="/molkabad">ملک آباد-بینالود</router-link>
 
-        <router-link to="/new">یزد</router-link>
+        <router-link to="/yazd">یزد</router-link>
 
-        <router-link to="/new">کرج</router-link>
+        <router-link to="/karaj">کرج</router-link>
 
-        <router-link to="/new">ارومیه</router-link>
+        <router-link to="/oroomieh">ارومیه</router-link>
 
-        <router-link to="/new">تبریز</router-link>
+        <router-link to="/tabriz">تبریز</router-link>
 
-        <router-link to="/new">قم</router-link>
+        <router-link to="/qom">قم</router-link>
 
-        <router-link to="/new">زاهدان</router-link>
+        <router-link to="/zahedan">زاهدان</router-link>
 
-        <router-link to="/new">یاسوج</router-link>
+        <router-link to="/yasooj">یاسوج</router-link>
 
-        <router-link to="/new">لواسان</router-link>
+        <router-link to="/lavasan">لواسان</router-link>
 
-        <router-link to="/new">اراک</router-link>
+        <router-link to="/arak">اراک</router-link>
 
-        <router-link to="/new">ساری</router-link>
+        <router-link to="/sari">ساری</router-link>
 
-        <router-link to="/new">بیرجند</router-link>
+        <router-link to="/birjand">بیرجند</router-link>
 
-        <router-link to="/new">گچساران</router-link>
+        <router-link to="/ghachsaran">گچساران</router-link>
 
-        <router-link to="/new">طرقبه-شاندیز</router-link>
+        <router-link to="/shandiz">طرقبه-شاندیز</router-link>
 
-        <router-link to="/new">اصفهان</router-link>
+        <router-link to="/esfahan">اصفهان</router-link>
 
-        <router-link to="/new">مشهد</router-link>
+        <router-link to="/mashhad">مشهد</router-link>
 
-        <router-link to="/new">اهواز</router-link>
+        <router-link to="/ahvaz">اهواز</router-link>
 
-        <router-link to="/new">سنندج</router-link>
+        <router-link to="/sanandaj">سنندج</router-link>
 
-        <router-link to="/new">بندرعباس</router-link>
+        <router-link to="/bandar">بندرعباس</router-link>
 
-        <router-link to="/new">سمنان</router-link>
+        <router-link to="/semnan">سمنان</router-link>
 
-        <router-link to="/new">شهرکرد</router-link>
+        <router-link to="/shahrkord">شهرکرد</router-link>
 
-        <router-link to="/new">ایلام</router-link>
+        <router-link to="/ilam">ایلام</router-link>
 
-        <router-link to="/new">اردبیل</router-link>
+        <router-link to="/ardebil">اردبیل</router-link>
 
-        <router-link to="/new">زنجان</router-link>
+        <router-link to="/zanjan">زنجان</router-link>
 
-        <router-link to="/new">خرم آباد</router-link>
+        <router-link to="/khoramabad">خرم آباد</router-link>
 
-        <router-link to="/new">دهدشت</router-link>
+        <router-link to="/dehdasht">دهدشت</router-link>
 
-        <router-link to="/new">فریمان</router-link>
+        <router-link to="/fariman">فریمان</router-link>
       </div>
     </div>
 
@@ -94,11 +94,11 @@
     <div class="dropdown">
       <button class="dropbtn" style="background-color: rgb(0,0,0,0);">راهنما و خدمات</button>
       <div class="dropdown-content">
-        <router-link to="/new">فهرست تولید کننده</router-link>
-        <router-link to="/new">اخرین محصولات مشاهده شده</router-link>
-        <router-link to="/new">زرگام چیست؟</router-link>
-        <router-link to="/new">پرسش وپاسخ های متداول</router-link>
-        <router-link to="/new">حریم خصوصی مقررات</router-link>
+        <router-link to="/list">فهرست تولید کننده</router-link>
+        <router-link to="/lastproduct">اخرین محصولات مشاهده شده</router-link>
+        <router-link to="/zargam">زرگام چیست؟</router-link>
+        <router-link to="/a&q">پرسش وپاسخ های متداول</router-link>
+        <router-link to="/pv">حریم خصوصی مقررات</router-link>
       </div>
     </div>
     <div style="margin: 0px 30px;height: 100px"><router-link to="/news" class="a">اخبار</router-link></div>
@@ -132,53 +132,53 @@
   
     <div class="all-product">
       
-      <div style="margin: 0px 10px;" ><router-link to="/news" class="a">کل محصولات</router-link></div>
-      <div ><router-link to="/news" class="a">تخفیفات ویژه</router-link></div>
+      <div style="margin: 0px 10px;" ><router-link to="/allproduct" class="a">کل محصولات</router-link></div>
+      <div ><router-link to="/Discount" class="a">تخفیفات ویژه</router-link></div>
       <div class="dropdown">
         <button class="dropbtn">کالای دیجیتال</button>
         <div class="dropdown-content">
-          <router-link to="/new">تلفن</router-link>
-          <router-link to="/new"> موبایل</router-link>
-          <router-link to="/new">هدفون</router-link>
-          <router-link to="/new">ساعت هوشمند</router-link>
+          <router-link to="/phone">تلفن</router-link>
+          <router-link to="/mobile"> موبایل</router-link>
+          <router-link to="/hedset">هدفون</router-link>
+          <router-link to="/smartwhatch">ساعت هوشمند</router-link>
         </div>
       </div>
       <div class="dropdown">
         <button class="dropbtn">اقلام غیر خوراکی</button>
         <div class="dropdown-content">
-          <router-link to="/new">لوازم تحریر</router-link>
-          <router-link to="/new">آرایشی وبهداشتی</router-link>
-          <router-link to="/new">خانه و آشپزخانه</router-link>
-          <router-link to="/new">شوینده</router-link>
+          <router-link to="/pen">لوازم تحریر</router-link>
+          <router-link to="/makeup">آرایشی وبهداشتی</router-link>
+          <router-link to="/home">خانه و آشپزخانه</router-link>
+          <router-link to="/washer">شوینده</router-link>
         </div>
       </div>
     
       <div class="dropdown">
         <button class="dropbtn">نان</button>
         <div class="dropdown-content">
-          <router-link to="/new">نان</router-link>
+          <router-link to="/bread">نان</router-link>
         </div>
       </div>
       
       <div class="dropdown">
         <button class="dropbtn">محصولات تنظیم بازار</button>
         <div class="dropdown-content">
-          <router-link to="/new">اقلام تنظیم بازار</router-link>
+          <router-link to="/shopping">اقلام تنظیم بازار</router-link>
           
         </div>
       </div>
       <div class="dropdown">
         <button class="dropbtn">اقلام خوراکی</button>
         <div class="dropdown-content">
-          <router-link to="/new">پروتئین</router-link>
-          <router-link to="/new">نوشیدنی</router-link> 
-          <router-link to="/new">لبنیات</router-link>
-          <router-link to="/new">تنقلات</router-link>
-          <router-link to="/new">خواربار</router-link>
-          <router-link to="/new">کنسرو  و غذای آماده</router-link>
-          <router-link to="/new">چاشنی و ادویه</router-link>
-          <router-link to="/new">چای و دمنوش</router-link>
-          <router-link to="/new">دسر شکلات و شیرینی جات </router-link>
+          <router-link to="/protein">پروتئین</router-link>
+          <router-link to="/Beverages">نوشیدنی</router-link> 
+          <router-link to="/Dairy">لبنیات</router-link>
+          <router-link to="/Snacks">تنقلات</router-link>
+          <router-link to="/Snacks">خواربار</router-link>
+          <router-link to="/Canned food and prepared food">کنسرو  و غذای آماده</router-link>
+          <router-link to="/Seasoning and spices">چاشنی و ادویه</router-link>
+          <router-link to="/Tea and tea">چای و دمنوش</router-link>
+          <router-link to="/Chocolate dessert and sweets">دسر شکلات و شیرینی جات </router-link>
         </div>
       </div>
 

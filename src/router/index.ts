@@ -8,8 +8,8 @@ import Buy from '../components/Buy.vue'
 import Login from '../components/Login.vue'
 import City from '../components/City.vue'
 import Call from '../components/Call.vue'
-import Product from '../components/product.vue'
-
+import Product from '../components/Product.vue'
+import Productpage from '../components/Productpage.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -62,6 +62,12 @@ const router = createRouter({
       path: '/product',
       name: 'product',
       component: Product
+    },
+    {
+      path: '/productpage/:id',
+      name: 'productpage',
+      component: Productpage,
+      props : true
     },
     {
       path: '/about',

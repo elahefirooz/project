@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-
+// import Productpage from '../components/Productpage.vue'
 interface Product {
     id: number
     title: string
@@ -7,6 +7,7 @@ interface Product {
     src: string
     price: string
     row:string 
+
 }
 
 type State = {
@@ -18,6 +19,7 @@ export const productsStore = defineStore('product', {
         return {
             products: [
                 {
+                   
                     id: 1,
                     title: 'چیپس برگه ای کچاپ مزمز ',
                     weight: '65 گرمی',
