@@ -8,7 +8,7 @@ import Buy from '../components/Buy.vue'
 import Login from '../components/Login.vue'
 import City from '../components/City.vue'
 import Call from '../components/Call.vue'
-import Prodect from '../components/prodect.vue'
+import Product from '../components/product.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -59,9 +59,9 @@ const router = createRouter({
       component: Call
     },
     {
-      path: '/prodect',
-      name: 'prodect',
-      component: Prodect
+      path: '/product',
+      name: 'product',
+      component: Product
     },
     {
       path: '/about',

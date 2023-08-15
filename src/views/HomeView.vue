@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Prodect from '../components/Prodect.vue'
+import Product from '../components/Product.vue'
 import Call from '../components/Call.vue'
 // import TheWelcome from '../components/TheWelcome.vue'
 </script>
@@ -13,7 +13,7 @@ import Call from '../components/Call.vue'
     </div> 
   </main>
    
-  <Prodect/>
+  <Product/>
 </template>
 
 

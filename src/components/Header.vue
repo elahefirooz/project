@@ -87,8 +87,19 @@
       </div>
     </div>
 
-    <div style="margin-right: 30px ">
-      <router-link to="/call" class="a"> تماس با ما 021-2418 </router-link>
+    <div style="margin-left: 100px ">
+      <router-link to="/call" class="s"> تماس با ما 2418-021 , 91092080-021 </router-link>
+
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn" style="background-color: rgb(0,0,0,0);">راهنما و خدمات</button>
+      <div class="dropdown-content">
+        <router-link to="/new">فهرست تولید کننده</router-link>
+        <router-link to="/new">اخرین محصولات مشاهده شده</router-link>
+        <router-link to="/new">زرگام چیست؟</router-link>
+        <router-link to="/new">پرسش وپاسخ های متداول</router-link>
+        <router-link to="/new">حریم خصوصی مقررات</router-link>
+      </div>
     </div>
     <div style="margin: 0px 30px;height: 100px"><router-link to="/news" class="a">اخبار</router-link></div>
     <div style="margin: 0px 30px"><router-link to="/blog" class="a"> بلاگ</router-link></div>
@@ -100,27 +111,25 @@
     </div>
     <div style="margin: 0px 30px">
       <router-link to="/login" class="a"> ورودبه حساب کاربری </router-link>
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg> -->
     </div>
-    <div class="dropdown">
-      <button class="dropbtn">راهنما و خدمات</button>
-      <div class="dropdown-content">
-        <router-link to="/new">فهرست تولید کننده</router-link>
-        <router-link to="/new">اخرین محصولات مشاهده شده</router-link>
-        <router-link to="/new">زرگام چیست؟</router-link>
-        <router-link to="/new">پرسش وپاسخ های متداول</router-link>
-        <router-link to="/new">حریم خصوصی مقررات</router-link>
-      </div>
-    </div>
+
+    
     </div>
     
 
 
     <div class="search">
       <img style="width: 256px;" src="../../public/bazargam.png" alt="">
-      <input style="height: 32px; width: 400px;" type="search" name="" id="">
+      <input style="height: 32px; width: 400px; border-radius: 10px; border: 2px solid #000;" type="search" name="" id="" placeholder="    جست وجو" v-model="textSearch" @keyup="search(textSearch)"  >
+      
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
   <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
 </svg>
+  
     </div>
     
 
@@ -185,13 +194,52 @@
     
     
   </div>
+
+
+  <div class="flex" v-for="x in searchProduct" :key="x.id">
+    <img style="width: 70px; height: 70px;" :src="x.src" alt="" >
+  <h3 style="margin: 30px;"  v-if="textSearch">{{ x.title }}</h3>
+  <h3 style="margin: 30px;"  v-if="textSearch">{{ x.weight }}</h3>
+  <h3  style="margin: 30px;" v-if="textSearch">{{ x.price }}</h3>
+ 
+  </div>
 </template>
 
-<script lang="ts">
-export default {}
+<script setup lang="ts">
+// import type { log } from "console";
+import { type Ref, ref } from "vue";
+import { productsStore } from "../../stores/product";
+const ProductsStore = productsStore();
+let textSearch = ref('');
+
+
+
+let searchProduct: Ref<{
+    id: number;
+    title: string;
+    weight: string;
+    src: string;
+    price: string;
+}[]>
+
+
+// export default {}
+function search(text : string)  {
+  // console.log(ProductsStore.products.filter( (p:any) => p.title.includes(textSearch)));
+    searchProduct =  ProductsStore.products.filter( (p:any) => p.title.includes(text) );
+  
+  
+
+}
 </script>
 
 <style>
+.s{
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  height: fit-content;
+}
 .a {
   /* background-color: rgb(215, 189, 239); */
   /* padding: 50px; */
@@ -212,11 +260,12 @@ export default {}
 }
 /* Dropdown Button */
 .dropbtn {
-  background-color: #b88bbe;
+  background-color: #f6f0f7;
   color: rgb(10, 2, 2);
   padding: 5px;
   font-size: 15px;
   border: none;
+  border-radius: 10px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -232,7 +281,7 @@ export default {}
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #4aede2;
+  background-color: rgb(209, 213, 216);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -296,5 +345,10 @@ export default {}
 }
 .bi{
   margin:50px ;
+}
+.flex{
+  display: flex;
+ justify-content: right;
+ direction: rtl;
 }
 </style>
