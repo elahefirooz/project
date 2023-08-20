@@ -1,5 +1,7 @@
+
+import { error } from 'console'
 import { defineStore } from 'pinia'
-// import Productpage from '../components/Productpage.vue'
+import { json } from 'stream/consumers'
 interface Product {
     id: number
     title: string
@@ -9,10 +11,26 @@ interface Product {
     row:string 
 
 }
+interface fetch{
+    id : Number
+    title : string
+    price : Number
+    description : string
+    category : string
+    image : string
+    rating : object
+}
 
 type State = {
   products: Product[]
+  object : fetch[]
 }
+
+
+
+
+
+
 
 export const productsStore = defineStore('product', {
     state: (): State => {
@@ -102,6 +120,20 @@ export const productsStore = defineStore('product', {
 
                 
             ],
+            object : []
         }
     },
+
+    actions :{
+        async readp(){
+            await fetch('https://fakestoreapi.com/products')
+            .then(Response => Response.json())
+            .then(json => this.object =json)
+            .catch(error => {if (error) {
+                console.log(error);
+                
+            }})
+        }
+    }
+
 })
