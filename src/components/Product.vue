@@ -43,8 +43,8 @@
          </router-link>
       </div>
     </div> 
-<!-- <h1 v-if="ProductsStore.object.length<1">loading ...</h1>
-<h1 v-else>{{ ProductsStore.object[0].title }}</h1> -->
+<h1 v-if="ProductsStore.object.length<1">loading ...</h1>
+<h1 v-else>{{ ProductsStore.object[0].title }}</h1>
 </template>
 
 
@@ -53,7 +53,8 @@
 import { productsStore } from '../../stores/product'
 const ProductsStore = productsStore()
 onMounted(() => {
-   ProductsStore.readp()
+
+  ProductsStore.readp()
 })
 </script>
 

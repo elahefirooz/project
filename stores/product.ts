@@ -120,7 +120,8 @@ export const productsStore = defineStore('product', {
 
                 
             ],
-            object : []
+            object : [],
+            
         }
     },
 
@@ -129,6 +130,17 @@ export const productsStore = defineStore('product', {
             await fetch('https://fakestoreapi.com/products')
             .then(Response => Response.json())
             .then(json => this.object =json)
+            .catch(error => {if (error) {
+                console.log(error);
+                
+            }})
+        },
+        async readproductById( id : number){
+            
+            
+            await fetch('https://fakestoreapi.com/products/'+id)
+            .then(Response => Response.json())
+            .then(json => this.object = json)
             .catch(error => {if (error) {
                 console.log(error);
                 
