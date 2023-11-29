@@ -15,7 +15,7 @@ const ProductsStore = productsStore();
 
 const props = defineProps<{id: number}>();
 onMounted(() => {
-  console.log("samle")
+  console.log("samle")  
    ProductsStore.readproductById(props.id)
  
    })

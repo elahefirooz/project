@@ -1,7 +1,7 @@
 
 <template>
   
-  <!-- <div class="back">
+  <div class="back">
     <div  v-for="product in ProductsStore.products" :key="product.id">
      
         <router-link class="product" v-if="product.row==='vv'"  :to="{name : 'productpage' , params:{id:product.id}}">
@@ -26,7 +26,7 @@
     <button style="background-color: chartreuse; border-radius: 5px;height: 30px;  "> افزودن به سبد خرید</button>
   </router-link>
   </div>
-  </div> -->
+  </div>
 
 
   <div  v-if="ProductsStore.object.length<1">loading ....</div>
@@ -43,8 +43,8 @@
          </router-link>
       </div>
     </div> 
-<h1 v-if="ProductsStore.object.length<1">loading ...</h1>
-<h1 v-else>{{ ProductsStore.object[0].title }}</h1>
+<!-- <h1 v-if="ProductsStore.object.length<1">loading ...</h1>
+<h1 v-else>{{ ProductsStore.object[0].title }}</h1> -->
 </template>
 
 
